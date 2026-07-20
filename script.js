@@ -1,64 +1,45 @@
-let is24Hour = false;
+let display = document.getElementById("display");
 
 
-function updateClock(){
+// Display input
+function appendValue(value){
 
-    let now = new Date();
-
-
-    let hours = now.getHours();
-    let minutes = now.getMinutes();
-    let seconds = now.getSeconds();
-
-    let period = "";
-
-
-    if(!is24Hour){
-
-        period = hours >= 12 ? "PM" : "AM";
-
-        hours = hours % 12;
-
-        hours = hours ? hours : 12;
-
-    }
-
-
-    hours = hours.toString().padStart(2,"0");
-    minutes = minutes.toString().padStart(2,"0");
-    seconds = seconds.toString().padStart(2,"0");
-
-
-    document.getElementById("clock").innerHTML =
-    `${hours}:${minutes}:${seconds} ${period}`;
+    display.value += value;
 
 }
 
 
-setInterval(updateClock,1000);
+// Clear screen
+function clearDisplay(){
+
+    display.value="";
+
+}
 
 
-updateClock();
+// Delete last character
+function deleteChar(){
+
+    display.value =
+    display.value.slice(0,-1);
+
+}
 
 
+// Calculate result
+function calculate(){
 
-document.getElementById("toggleBtn")
-.addEventListener("click",function(){
+    try{
 
-
-    is24Hour = !is24Hour;
-
-
-    if(is24Hour){
-
-        this.innerHTML="Switch to 12 Hour";
+        display.value =
+        eval(display.value);
 
     }
-    else{
 
-        this.innerHTML="Switch to 24 Hour";
+    catch{
+
+        display.value="Error";
 
     }
 
-
-});
+}
