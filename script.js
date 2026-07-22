@@ -1,7 +1,7 @@
 const images = [
-"images/image1.jpg",
-"images/image2.jpg",
-"images/image3.jpg"
+"https://images.unsplash.com/photo-1507525428034-b723cf961d3e",
+"https://images.unsplash.com/photo-1519608487953-e999c86e7455",
+"https://images.unsplash.com/photo-1500530855697-b586d89ba3ee"
 ];
 let currentIndex = 0;
 const sliderImage =
