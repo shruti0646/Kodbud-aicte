@@ -1,5 +1,5 @@
 # Kodbud-aicte
-## Task-5 # Image Slider Carousel 🖼️
+## Task-6 # Image Slider Carousel 🖼️
 
 A responsive image slider built using HTML, CSS and Vanilla JavaScript.
 
