@@ -1,5 +1,5 @@
 # Kodbud-aicte
-## Task-6 # Form Validation App 📝
+## Task-7 # Form Validation App 📝
 
 A user registration form with dynamic validation using Vanilla JavaScript.
 
